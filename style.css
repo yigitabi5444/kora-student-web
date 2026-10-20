@@ -1,157 +1,134 @@
-/* Colors and fonts from the old site (kora-aerospace.org). */
-:root {
-  --bg: #222222;
-  --surface: #2d2d2d;
-  --cyan: #00f0ff;
-  --text: #f5f5f5;
-  --muted: #a3a3a3;
-}
-
+/* Layout only. Colors and fonts come from tokens.css. */
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--bg) radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 30px 30px;
-  color: var(--text);
-  font: 300 1.0625rem/1.6 'Space Grotesk', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 300 1.0625rem/1.6 var(--font-sans);
 }
 
-::selection { background: var(--cyan); color: var(--bg); }
+::selection { background: var(--color-accent); color: var(--color-on-accent); }
 
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 
 a { color: inherit; text-decoration: none; }
 
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 1rem; }
+
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  background: rgba(34, 34, 34, 0.95);
-  border-bottom: 1px solid #333;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.logo { width: 4rem; }
+.logo { width: 5rem; }
 
-.nav nav { display: flex; align-items: center; gap: 1.25rem; }
-
-.nav nav a {
-  font-size: 0.75rem;
+.tab {
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-.nav nav a:hover { color: var(--cyan); }
+.tab:hover, .tab[aria-current] { border-color: var(--color-accent); }
 
-main { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
-
-section { padding: 5rem 0; border-bottom: 1px solid #333; }
+section { padding: 3rem 0; }
 
 .tag {
   margin: 0 0 0.75rem;
-  font: 400 0.8rem 'JetBrains Mono', monospace;
-  color: var(--cyan);
+  font: 400 0.8rem var(--font-mono);
+  color: var(--color-accent);
 }
 
-h1, h2 {
+h1 {
   margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 7vw, 4rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 
-h1 { font-size: clamp(2.25rem, 7vw, 4.5rem); }
+.lead { max-width: 34rem; margin: 0 0 2rem; }
 
-h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
-
-.lead { max-width: 36rem; margin: 0 0 2rem; color: #e5e5e5; }
-
-.note { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.note { margin: 1rem 0 0; color: var(--color-muted); font-size: 0.9rem; }
 
 .btn {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background: var(--cyan);
-  color: var(--bg);
+  padding: 0.9rem 2.25rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  letter-spacing: 0.05em;
 }
 
-.btn:hover { background: #fff; }
+.btn:hover { background: var(--color-text); }
 
-.nav nav .btn.small { padding: 0.5rem 1rem; color: var(--bg); }
-
-.hero {
-  display: grid;
-  gap: 3rem;
-  align-items: center;
-  padding-top: 4rem;
-}
-
-.hero img, .cards img {
-  width: 100%;
-  border: 1px solid #333;
-  object-fit: cover;
-}
+.hero { display: grid; gap: 2.5rem; align-items: center; }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1rem;
+  margin: 0;
 }
 
-.cards figure { margin: 0; background: var(--surface); }
+.cards figure { margin: 0; background: var(--color-surface); }
 
-.cards img { aspect-ratio: 4 / 3; border: 0; }
+.cards img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
-.cards figcaption {
-  padding: 0.75rem 1rem;
-  font: 400 0.8rem 'JetBrains Mono', monospace;
-  text-transform: uppercase;
-}
+.cards figcaption { padding: 0.75rem 1rem 1rem; color: var(--color-muted); font-size: 0.9rem; }
 
-.list {
+.cards b { display: block; color: var(--color-text); font: 400 0.8rem var(--font-mono); text-transform: uppercase; }
+
+.areas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1rem;
-  margin: 2rem 0 0;
+  margin: 0 0 2.5rem;
   padding: 0;
   list-style: none;
 }
 
-.list li { padding: 1.25rem; border: 1px solid #333; border-left: 2px solid var(--cyan); font-weight: 400; }
+.areas li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-line);
+  font-weight: 400;
+}
 
-.join { border-bottom: 0; text-align: center; }
-
-.join .lead { margin-left: auto; margin-right: auto; }
+.areas svg {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  color: var(--muted);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--color-muted);
   font-size: 0.85rem;
 }
 
-footer a:hover { color: var(--cyan); }
+footer a:hover { color: var(--color-accent); }
 
-@media (min-width: 900px) {
-  .hero { grid-template-columns: 1fr 1fr; padding-top: 6rem; }
-}
-
-/* ponytail: on phones only the Join button stays in the nav; sections are one scroll away. */
-@media (max-width: 600px) {
-  .nav nav a:not(.btn) { display: none; }
-  section { padding: 3.5rem 0; }
+@media (min-width: 860px) {
+  .hero { grid-template-columns: 1fr 1fr; }
+  section { padding: 4rem 0; }
 }

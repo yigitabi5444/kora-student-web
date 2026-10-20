@@ -3,78 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kora Student Team</title>
-  <meta name="description" content="ODTÜ student team that designs, builds and flies fixed-wing drones.">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Kora Aerospace Student Team</title>
+  <meta name="description" content="ODTÜ student team that designs, builds and flies drones. Looking for new members.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=JetBrains+Mono&display=swap">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a href="/"><img src="/media/logo.svg" alt="Kora" class="logo"></a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#training">Training</a>
-      <a href="#competitions">Competitions</a>
-      <a href="#join" class="btn small">Join</a>
-    </nav>
+  <header class="wrap nav">
+    <a href="./"><img src="media/logo.svg" alt="Kora Aerospace Student Team" class="logo" width="80" height="37"></a>
+    <a href="apply/" class="tab">Apply</a>
   </header>
 
-  <main>
+  <main class="wrap">
     <section class="hero">
       <div>
-        <p class="tag">// ODTÜ student team</p>
-        <h1>We design, build and fly drones.</h1>
-        <p class="lead">Fixed-wing aircraft, from the airfoil to the flight controller board.</p>
-        <a href="#join" class="btn">Join the team</a>
+        <p class="tag">// Kora Aerospace Student Team</p>
+        <h1>Looking for new members</h1>
+        <p class="lead">ODTÜ students who design, build and fly drones.</p>
+        <a href="apply/" class="btn">Apply</a>
       </div>
-      <img src="/media/launch.jpg" alt="Hand launch of a flying wing">
+      <img src="media/launch.jpg" alt="Hand launch of a flying wing" width="1200" height="778">
     </section>
 
-    <section id="projects">
-      <p class="tag">// Projects</p>
-      <h2>Short build sprints.</h2>
-      <p class="lead">October to December 2026. Each sprint ends with a flight or a test.</p>
+    <section>
       <div class="cards">
-        <figure><img src="/media/cad.jpg" alt="CAD model of a flying wing" loading="lazy"><figcaption>Design</figcaption></figure>
-        <figure><img src="/media/wing.jpg" alt="Built flying wing" loading="lazy"><figcaption>Airframe</figcaption></figure>
-        <figure><img src="/media/pcb.jpg" alt="Flight controller board" loading="lazy"><figcaption>Avionics</figcaption></figure>
+        <figure>
+          <img src="media/cad.jpg" alt="CAD model of a flying wing" width="900" height="582" loading="lazy">
+          <figcaption><b>Design</b>From the airfoil to the CAD model.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/wing.jpg" alt="Flying wing built by the team" width="900" height="667" loading="lazy">
+          <figcaption><b>Airframe</b>Built and flown by the team.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/pcb.jpg" alt="Flight controller board" width="680" height="900" loading="lazy">
+          <figcaption><b>Avionics</b>Our own flight controller board.</figcaption>
+        </figure>
       </div>
-    </section>
-
-    <section id="training">
-      <p class="tag">// Training</p>
-      <h2>Learn by building.</h2>
-      <ul class="list">
-        <li>CAD and production</li>
-        <li>Flight controller setup</li>
-        <li>Wiring and power</li>
-        <li>Simulation and autonomy</li>
-        <li>Onboard vision</li>
-        <li>Test reports</li>
-      </ul>
-    </section>
-
-    <section id="competitions">
-      <p class="tag">// Competitions</p>
-      <h2>2027 season.</h2>
-      <p class="lead">SUAS and TEKNOFEST UAV. We choose after the sprints.</p>
-      <p class="note">2026: SUAS and TEKNOFEST Fighter UAV. No finals. We now build spare aircraft.</p>
-    </section>
-
-    <section id="join" class="join">
-      <p class="tag">// Join</p>
-      <h2>8 to 12 ODTÜ students.</h2>
-      <p class="lead">We look at how fast you learn, not what you already know.</p>
-      <a href="https://forms.gle/YCi1YLXFg8C5UW7W9" class="btn" target="_blank" rel="noopener noreferrer">Apply</a>
+      <p class="note">We learn in short build sprints and compete in SUAS and TEKNOFEST.</p>
     </section>
   </main>
 
-  <footer>
+  <footer class="wrap">
     <a href="mailto:kora.aerospace@gmail.com">kora.aerospace@gmail.com</a>
     <a href="https://kora-aerospace.com">Kora Aerospace</a>
   </footer>
