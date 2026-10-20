@@ -35,8 +35,6 @@ a { color: inherit; text-decoration: none; transition: color var(--kora-ease), b
 
 section { padding: var(--kora-s8) 0; }
 
-section + section { padding-top: 0; }
-
 h1 {
   margin: 0 0 var(--kora-s2);
   color: var(--kora-green);
@@ -59,35 +57,19 @@ h1 {
 
 .btn:hover { background: var(--kora-green-dim); }
 
-.note { margin: var(--kora-s2) 0 0; color: var(--kora-text-muted); font-size: var(--kora-fs-small); }
-
 .hero { display: grid; gap: var(--kora-s6); align-items: center; }
 
 .hero img { width: 100%; border-radius: var(--kora-radius); }
 
-.facts, .areas {
+.areas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: var(--kora-s2);
-  margin: 0;
+  gap: var(--kora-s3);
+  margin: var(--kora-s6) 0;
   padding: 0;
   list-style: none;
 }
 
-.facts li { padding-top: var(--kora-s2); border-top: 1px solid var(--kora-line); color: var(--kora-text-muted); }
-
-.facts .label { display: block; margin-bottom: var(--kora-s1); color: var(--kora-text); }
-
-.areas { margin-bottom: var(--kora-s6); }
-
-.areas li {
-  display: flex;
-  align-items: center;
-  gap: var(--kora-s2);
-  padding: var(--kora-s3);
-  border-radius: var(--kora-radius);
-  background: var(--kora-surface);
-}
+.areas li { display: flex; align-items: center; gap: var(--kora-s2); }
 
 .areas svg {
   flex: none;
