@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718.47 332.43">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718.47 420">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #f5f5f5;
       }
     </style>
   </defs>
@@ -20,4 +20,9 @@
   <path class="cls-1" d="M496.79,247.92v17.83h-6.25v-43.68h18.3c2.59,0,9.05,5.35,9.87,7.97,1.5,4.83.23,11.73-3.75,15.07-.71.6-4.69,2.8-5.23,2.8h-12.94ZM496.79,242.57c21.62,3.44,21.46-18.51,0-15.15v15.15Z"/>
   <polygon class="cls-1" points="698.49 222.07 698.49 227.42 682.42 227.42 682.42 239.9 698.49 239.9 698.49 245.25 682.42 245.25 682.42 260.4 698.49 260.4 698.49 265.75 676.17 265.75 676.17 222.07 698.49 222.07"/>
   <polygon class="cls-1" points="281.7 222.07 281.7 227.42 264.74 227.42 264.74 239.9 281.7 239.9 281.7 245.25 266.08 245.25 264.74 246.59 264.74 260.4 281.7 260.4 281.7 265.75 259.39 265.75 259.39 222.07 281.7 222.07"/>
+  <g transform="rotate(-3 450 340)">
+    <rect x="262" y="300" width="380" height="76" rx="4" fill="#000" opacity=".35" transform="translate(4 5)"/>
+    <rect x="262" y="300" width="380" height="76" rx="4" fill="#5cc098"/>
+    <text x="452" y="351" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="36" letter-spacing="5" fill="#141414">STUDENT TEAM</text>
+  </g>
 </svg>
