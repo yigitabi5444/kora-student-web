@@ -44,6 +44,9 @@ h1, h2, p, ul { margin: 0; }
   padding-block: var(--kora-s4);
 }
 
+/* The logo never shrinks: 180px wide, the minimum is 160px. */
+.logo { flex: none; }
+
 .tab { padding-block: var(--kora-s1); border-bottom: 1px solid transparent; }
 
 .tab:hover, .tab[aria-current] { color: var(--kora-green); border-color: var(--kora-green); }
