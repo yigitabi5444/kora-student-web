@@ -148,10 +148,7 @@ footer {
 
 footer a:hover { color: var(--kora-green); }
 
-@media (min-width: 700px) {
-  .areas { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (min-width: 860px) {
   .hero { grid-template-columns: 1fr 1.2fr; min-height: 80vh; }
+  .areas { grid-template-columns: repeat(3, 1fr); }
 }
